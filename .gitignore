@@ -1,0 +1,8 @@
+node_modules/
+build/
+npm-debug.log
+.vscode/
+package-lock.json
+jsconfig.json
+typings.json
+typings/

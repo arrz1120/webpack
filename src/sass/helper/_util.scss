@@ -1,0 +1,23 @@
+@function rem($px){
+  @return ($px*16/750)*1rem
+}
+@mixin bg($url){
+  @if $url!=''{
+    background: url($url) center top no-repeat;
+  }
+  @else{
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  background-size: 100%;
+}
+@mixin wh($w,$h){
+  width: rem($w);
+  height: rem($h);
+}
+@mixin pos($top,$right,$bottom,$left){
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

@@ -1,0 +1,7 @@
+{
+  "port":9527,
+  "autoConfig":true,
+  "buildDir":"./build",
+  "originStaticDir":"",
+  "originTempDir":""
+}
