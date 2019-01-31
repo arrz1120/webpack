@@ -157,10 +157,8 @@ module.exports={
 
     // 提取 css
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: 'css/[name].css?[chunkhash:8]',
-      chunkFilename: 'css/[name].css?[chunkhash:8]'
+      filename: 'css/[name].css?[contenthash:8]',
+      chunkFilename: 'css/[name].[id].css?[contenthash:8]'
     }),
 
     // 复制文件
@@ -184,22 +182,19 @@ module.exports={
     splitChunks:{
       chunks: 'all',
       minSize: 30000,
-      // minChunks: 2,
+      minChunks: 3,
       maxAsyncRequests: 5,
       maxInitialRequests: 3,
       automaticNameDelimiter:'-',
       cacheGroups:{
-        default:false,
-        vendor1st:{
-          name:'vendor1st',
-          minChunks:3,
+        default:{
+          name:'bdle.0'
+        },
+        bdle1:{
+          name:'bdle.1',
+          minChunks:4,
           priority: -1
         },
-        vendor2nd:{
-          name:'vendor2nd',
-          minChunks:2,
-          priority: -2
-        }
       }
     }
   }
