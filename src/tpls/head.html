@@ -26,7 +26,7 @@
     }
     var adapt=function(){
       var docEl=doc.documentElement
-      var width=win.innerWidth>750?750:win.innerWidth
+      var width=docEl.getBoundingClientRect().width>750?750:docEl.getBoundingClientRect().width
       config.rem=width/16
       docEl.style.fontSize=config.rem+'px'
     }

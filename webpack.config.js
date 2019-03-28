@@ -158,7 +158,7 @@ module.exports={
     // 提取 css
     new MiniCssExtractPlugin({
       filename: 'css/[name].css?[contenthash:8]',
-      chunkFilename: 'css/[name].[id].css?[contenthash:8]'
+      chunkFilename: 'css/[name].css?[contenthash:8]'
     }),
 
     // 复制文件
